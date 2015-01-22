@@ -44,3 +44,19 @@ should look like this::
     kotti.configurators = kotti_multilingual.kotti_configure
 
 .. _Kotti: http://pypi.python.org/pypi/Kotti
+
+Tests
+=====
+
+The test setup requires additional steps::
+
+    $ virtualenv --no-site-packages .
+    $ source bin/activate
+    $ pip install -r requirements.txt
+    $ python setup.py develop
+    $ python setup.py dev
+
+How to launch tests::
+
+    $ py.test
+
