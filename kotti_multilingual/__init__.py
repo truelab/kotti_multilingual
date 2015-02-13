@@ -56,5 +56,6 @@ def includeme(config):
     :type config: :class:`pyramid.config.Configurator`
     """
 
+    import patches
     config.add_translation_dirs('kotti_multilingual:locale')
     config.scan(__name__)
