@@ -8,12 +8,7 @@ TRANSLATE_BLACKLIST = ['translation_targets', 'translation_source']
 def copy(self, **kwargs):
     """ Fix problem with multilingual and copy&paste.
 
-        If you paste objects after a cut action you might
-        expect that the translation reference is copied as
-        well (not sure? you might have usability issues with
-        paths.
-
-        But it you paste objects after a copy action, the
+        If you paste objects after a copy action, the
         translation_targets and translation_source properties
         should be omitted from copy.
     """
