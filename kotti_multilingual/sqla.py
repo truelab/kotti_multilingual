@@ -14,8 +14,11 @@ class SharedInstrumentedAttribute(InstrumentedAttribute):
         """Refuse to set the attribute if we're a translation target.
         """
         if get_source(instance):
-            raise TypeError(
-                "Can't set %r attribute on translation." % self.key)
+            # just don't save the field, experienced a random
+            # type error on edit with data fields like files
+            return
+            # raise TypeError(
+            #     "Can't set %r attribute on translation." % self.key)
 
         return super(SharedInstrumentedAttribute, self).__set__(
             instance, value)
