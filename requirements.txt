@@ -1,5 +1,0 @@
--r https://raw.githubusercontent.com/Kotti/Kotti/1.0.0-alpha.3/requirements.txt
-
-# Kotti
-Kotti[development]==1.0.0a3
-pytest
