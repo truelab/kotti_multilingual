@@ -9,7 +9,9 @@ Changelog
 
 - Add a translation dropdown UI for adding a translation of an item.
 
-- Fixed translation of objects with not nullable fields,
+- Fixed translation of objects with not nullable fields
+
+- Added support for sqlalchemy's association_proxy
 
 0.1a3 - 2013-05-08
 ------------------
