@@ -13,6 +13,8 @@ Changelog
 
 - Added support for sqlalchemy's association_proxy
 
+- Fixed (?) intermittent problem with get_source (integrity error)
+
 0.1a3 - 2013-05-08
 ------------------
 
