@@ -74,3 +74,18 @@ def get_languages(request=None):
 
 def get_language_title(language_code):
     return Locale(language_code).get_display_name(language_code)
+
+
+def update_schema(context, schema):
+    """ Update the object schema, turning language independent node
+        into readonly fields """
+    if get_source(context):
+        language_independent = list(context.type_info.
+                                    language_independent_fields)
+        language_independent.append('file')
+        for item in [item for item in schema.children if item.widget]:
+            name = item.name
+            if name in language_independent:
+                item.widget.readonly = True
+                if name == 'file':
+                    item.missing = None

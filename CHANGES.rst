@@ -13,7 +13,10 @@ Changelog
 
 - Added support for sqlalchemy's association_proxy
 
-- Fixed (?) intermittent problem with get_source (integrity error)
+- Fixed intermittent problem with get_source (integrity error)
+
+- Added ``api.update_schema`` that turns language independent nodes widgets
+  into readonly mode 
 
 0.1a3 - 2013-05-08
 ------------------
