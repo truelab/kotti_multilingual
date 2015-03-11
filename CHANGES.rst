@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.2dev - unreleased
--------------------
+0.2truelabdev (2015-03-11)
+--------------------------
 
 - Maintain translation links between content items, with translation source
   and targets.
