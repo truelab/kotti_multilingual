@@ -79,7 +79,7 @@ def get_language_title(language_code):
 def update_schema(context, schema, extra_fields=[]):
     """ Update the object schema, turning language independent node
         into readonly fields """
-    if get_source(context):
+    if get_source(context) is not None:
         language_independent = list(context.type_info.
                                     language_independent_fields)
         language_independent.extend(extra_fields)
