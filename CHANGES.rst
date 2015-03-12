@@ -7,6 +7,11 @@ Changelog
 - Added a ``kotti_multilingual.blacklist`` setting with a list of type names
   not translatable
 
+- Changed policy for translate action. Now the translated document is automatically
+  filled with the parent translation (enhanced usability since we don't have the screen
+  splitted in two parts like LinguaPlone). This is possible thanks to a change in 
+  sqla.py since we don't set language independent attributes on translated documents
+
 0.2truelabdev (2015-03-11)
 --------------------------
 

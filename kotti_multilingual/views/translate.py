@@ -64,16 +64,7 @@ def add_translation(context, request):
     source_id = request.params['id']
     source = DBSession.query(Content).get(int(source_id))
 
-    # XXX: fix problem with translations of objects with not
-    # nullable fields. Please review
-    columns = {}
-    columns_black_list = ('id', 'parent', 'parent_id', '_children',
-        'local_groups', '_tags')
-    cls = source.__class__
-    for column in cls.__table__.columns:
-        if not column.nullable and column.key not in columns_black_list:
-            columns[column.key] = getattr(source, column.key, None)
-    translation = context[source.__name__] = source.__class__(**columns)
+    translation = context[source.__name__] = source.copy()
     api.link_translation(source, translation)
     return HTTPFound(location=request.resource_url(translation, 'edit'))
 
