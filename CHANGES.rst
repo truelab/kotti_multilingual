@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.1truelab (unreleased)
+0.2.1truelab (2015-03-12)
 -------------------------
 
 - Added a ``kotti_multilingual.blacklist`` setting with a list of type names
