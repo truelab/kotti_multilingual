@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.2.2truelab (unreleased)
+-------------------------
+
+- Nothing changed yet.
+
+
 0.2.1truelab (2015-03-12)
 -------------------------
 
