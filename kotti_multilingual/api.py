@@ -78,7 +78,10 @@ def get_language_title(language_code):
 
 def update_schema(context, schema, extra_fields=[]):
     """ Update the object schema, turning language independent node
-        into readonly fields """
+        into readonly fields.
+
+        DEPRECATED, use ``widget.i10n_widget_factory`` instead.
+    """
     if get_source(context) is not None:
         language_independent = list(context.type_info.
                                     language_independent_fields)

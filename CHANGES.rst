@@ -4,7 +4,11 @@ Changelog
 0.2.2truelab (unreleased)
 -------------------------
 
-- Nothing changed yet.
+- Deprecated ``api.update_schema`` (use ``widget.i10n_widget_factory`` instead).
+
+- Added ``widget.i10n_widget_factory`` deferred widget.
+  Turns field into readonly mode if the context is a translation.
+  Obviously this widget makes sense only on edit forms.
 
 
 0.2.1truelab (2015-03-12)
