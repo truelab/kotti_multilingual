@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.2truelab (unreleased)
+0.2.2 (unreleased)
 -------------------------
 
 - Removed ``api.update_schema`` (use ``widget.i10n_widget_factory`` instead).
