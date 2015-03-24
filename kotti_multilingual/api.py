@@ -74,21 +74,3 @@ def get_languages(request=None):
 
 def get_language_title(language_code):
     return Locale(language_code).get_display_name(language_code)
-
-
-def update_schema(context, schema, extra_fields=[]):
-    """ Update the object schema, turning language independent node
-        into readonly fields.
-
-        DEPRECATED, use ``widget.i10n_widget_factory`` instead.
-    """
-    if get_source(context) is not None:
-        language_independent = list(context.type_info.
-                                    language_independent_fields)
-        language_independent.extend(extra_fields)
-        for item in [item for item in schema.children if item.widget]:
-            name = item.name
-            if name in language_independent:
-                item.widget.readonly = True
-                if item.missing is not None:
-                    item.missing = None

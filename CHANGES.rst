@@ -4,15 +4,14 @@ Changelog
 0.2.2truelab (unreleased)
 -------------------------
 
-- Deprecated ``api.update_schema`` (use ``widget.i10n_widget_factory`` instead).
+- Removed ``api.update_schema`` (use ``widget.i10n_widget_factory`` instead).
 
 - Added ``widget.i10n_widget_factory`` deferred widget.
   Turns field into readonly mode if the context is a translation.
-  Obviously this widget makes sense only on edit forms.
 
-  If you area going to apply the i10n_widget_factory for a required field, you'll
-  have to provide a deferred missing function
-
+  This deferred widget is also compatible with add forms, you should bind an ``addform``
+  property to ``True`` and the widget will be rendered as usual in edit mode.
+  You can do that adding a ``get_bind_data`` method on your add form.
 
 0.2.1truelab (2015-03-12)
 -------------------------
