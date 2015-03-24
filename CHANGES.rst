@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.2.2 (unreleased)
--------------------------
+0.2.2 (2015-03-24)
+------------------
 
 - Removed ``api.update_schema`` (use ``widget.i10n_widget_factory`` instead).
 
