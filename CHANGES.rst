@@ -10,6 +10,9 @@ Changelog
   Turns field into readonly mode if the context is a translation.
   Obviously this widget makes sense only on edit forms.
 
+  If you area going to apply the i10n_widget_factory for a required field, you'll
+  have to provide a deferred missing function
+
 
 0.2.1truelab (2015-03-12)
 -------------------------
